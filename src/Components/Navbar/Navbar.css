@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#E1BE00;
+    color: white;
+    
+    height: 50px;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #websitename {
+    font-size: 40px;
+    margin-left: 11px;
+    letter-spacing: 1px;
+  }
+  
+  .navbar a {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  /* .navbar a:hover {
+    
+  } */
+  .navbar a.active{
+    /* transform: translateY(-2px); */
+    text-decoration: underline;
+  }
+
+  .sign-up-cart-button-container {
+    display: flex;
+    align-items: center; /* Align buttons vertically in the container */
+  }
+  
+  .sign-up-button {
+    background-color: rgb(99, 102, 62);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px; /* Adjusted margin */
+    margin-top: 15px;
+    height: 35px;
+  }
+  

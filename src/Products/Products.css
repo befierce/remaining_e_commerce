@@ -1,0 +1,27 @@
+
+.product {
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .product p {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .product p.price {
+    color: #007bff;
+  }
+  .product-link{
+    text-decoration: none;
+  }

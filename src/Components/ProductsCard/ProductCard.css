@@ -1,0 +1,21 @@
+.productsCard {
+    width: 400px; /* Set the width of the card */
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fcf8ac;
+    padding-bottom: 60px;
+
+}
+
+.productsCard img {
+    max-width: 100%; 
+    max-height: 200px; 
+    object-fit: contain; 
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
