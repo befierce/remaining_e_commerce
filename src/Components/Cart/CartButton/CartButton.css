@@ -27,8 +27,8 @@
 }
 .numberofitems{
     margin-left: 12px;
-    font-size: 12px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 700;
-    color:rgb(234, 221, 221)
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    color:rgb(255, 255, 255)
 }

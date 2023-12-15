@@ -4,13 +4,26 @@ import { useState } from "react";
 
 const CartProvider  = (props)=>{
     const [items, setItems] = useState([]);
-    // itmes = [];
 
     const addItemHandler = (item)=>{
         console.log("additem handler working")
-        setItems((prevItems)=>{
-            return [...prevItems,item];
-        })
+        const itemIndex = items.findIndex((cartItem)=>cartItem.id ===item.id)
+        if(itemIndex !== -1){
+            setItems((prevItems)=>{
+                const updatedItems = [...prevItems];
+                const updatedItem = {
+                    ...updatedItems[itemIndex],
+                    amount: updatedItems[itemIndex].amount + 1 
+                };
+                updatedItems[itemIndex] = updatedItem;
+                return updatedItems;
+            })
+        }
+        else{
+            setItems((prevItems)=>{
+                return [...prevItems,{...item,amount:1}];
+            })
+        }
     }
     const removeItemHandler = (id)=>{
 

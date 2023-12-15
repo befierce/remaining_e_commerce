@@ -2,10 +2,16 @@ import carticon from "./shopping-cart.png";
 import "./CartButton.css";
 import Cart from "../CartComponent/Cart";
 import { useState } from "react";
+import { useContext } from "react";
+import CartContext from "../../../store/cart-context";
 
 const CartButton = () => {
-  const numberOfItems = 1;
   const [cartOpen, setCartOpen] = useState(false);
+  const cartctx = useContext(CartContext);
+
+  const numberOfItems = cartctx.items.reduce((accumulator, item) => {
+    return accumulator +  item.amount;
+  }, 0);
   const openCartHandler = () => {
     setCartOpen((prevstate)=>{return !prevstate});
   };
