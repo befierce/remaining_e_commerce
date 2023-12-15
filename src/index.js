@@ -4,15 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AuthContextProvider from "./store/auth-context-provide";
-import {} from "react-router-dom"
+import {} from "react-router-dom";
+import CartProvider from "./store/cart-provider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthContextProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </AuthContextProvider>
+  <CartProvider>
+    <AuthContextProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </AuthContextProvider>
+  </CartProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

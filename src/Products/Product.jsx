@@ -5,11 +5,12 @@ import { NavLink } from "react-router-dom";
 
 const Products = (props) => {
   const productsArray = props.data.map((product, index) => (
-    <NavLink key={index} to={`/product/${product.id}`} className="product-link">
     <ProductsCard key={index}>
       <div className="product">
-        <img src={product.imageURL} alt={product.title} />
-        <p>{product.title}</p>
+        <NavLink to={`/product/${product.id}`} className="product-link">
+          <img src={product.imageURL} alt={product.title} />
+          <p>{product.title}</p>
+        </NavLink>
         <p>Price: ${product.price}</p>
         <AddToCartButton
           item={product}
@@ -18,12 +19,10 @@ const Products = (props) => {
         />
       </div>
     </ProductsCard>
-    </NavLink>
   ));
 
   return (
-    
-      <div className="products-container">{productsArray}</div>
+    <div className="products-container">{productsArray}</div>
   );
 };
 
