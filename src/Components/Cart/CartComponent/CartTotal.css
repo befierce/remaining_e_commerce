@@ -7,16 +7,21 @@
     align-self:baseline
   } */
 
-  .total {
-    font-weight: bold;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: 20px; /* Adjust the value to position it as desired */
-    width: 93%;/* Ensure it spans the entire width of the modal */
-    /* text-align: center; */
-    display: flex;
-    justify-content: space-between;
-  }
+.total-amount-procedd-to-pay-button-container{
+  display: flex;
+  position: sticky;
+}
+    .total {
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: static;
+      bottom: 20px; /* Adjust the value to position it as desired */
+      width: 93%;/* Ensure it spans the entire width of the modal */
+      /* text-align: center; */
+      /* display: flex;  */
+      justify-content: space-between;
+      margin-left: 30px;
+    }
   .Button{
     background-color:#f9f6f5;
     padding:0.1rem 1rem;
@@ -31,4 +36,15 @@
     color:#f9f6f5;
     background-color:#8a2b06;
     cursor: pointer;
+  }
+
+  .proceed-to-pay{
+    background-color: rgb(72, 63, 211);
+    margin-right: 25px;
+    border-radius: 40px;
+    color:white
+  }
+
+  .proceed-to-pay:hover{
+    background-color: rgb(20, 14, 94);
   }
