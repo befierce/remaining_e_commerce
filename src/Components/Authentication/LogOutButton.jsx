@@ -7,6 +7,7 @@ const LogOutButton = (prop) => {
     const authctx = useContext(AuthContext);
     const logOutHandler = ()=>{
         authctx.logout();
+          localStorage.removeItem("userEmail")
     }
 
   return (

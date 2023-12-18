@@ -14,31 +14,24 @@ const SignUpForm = () => {
   const navigate = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
-
   const authctx = useContext(AuthContext)
-  //   const history = useHistory();
-
   const [isLoggedInMode, setIsLoggedInMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const changeModeHandler = () => {
     setIsLoggedInMode((prev) => !prev);
-
-    // if (isLoggedInMode) {
-    //   history.push("/login"); // Change the URL to '/login' on login mode
-    // } else {
-    //   history.push("/signup"); // Change the URL to '/signup' on signup mode
-    // }
   };
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
-
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
     setIsLoading(true);
-
     let url;
+    if(isLoggedInMode){
+      localStorage.setItem("userEmail",enteredEmail);
+    }
+
     if (isLoggedInMode) {
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCmTY8ac-zTqK5VYV24wPcGY4bXVjOwWDU";
@@ -58,6 +51,7 @@ const SignUpForm = () => {
         "content-type": "application/json",
       },
     }).then((res) => {
+      console.log("response after login or sign up",res);
       setIsLoading(false);
       if (res.ok && res.status === 200) {
         return res.json();
