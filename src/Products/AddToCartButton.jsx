@@ -9,16 +9,17 @@ const AddToCartButton = (props) => {
   // console.log(emailid);
   const addToCartHandler = async () => {
     cartctx.addItem(props.item);
+    console.log("ADD ITEM TO CART BUTTON", props.item);
     const emailid = localStorage.getItem("userEmail").replace(/[.@]/g, "");
     const response = await fetch(
-      `https://crudcrud.com/api/a8fe2055922d40b2bf1a384e7b83be95/cart${emailid}`,
+      `https://crudcrud.com/api/4f116e22f46c4e32b84ec1cc61be6702/cart${emailid}`,
       {
         method: "POST",
         body: JSON.stringify(props.item),
         headers: { "content-type": "application/json" },
       }
     );
-    console.log("response from crd crud", response);
+    console.log("response from crd crud when add item to cart pressed", response);
   };
 
   return (

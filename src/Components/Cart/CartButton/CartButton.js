@@ -17,9 +17,9 @@ const CartButton = () => {
     try {
       const emailId = localStorage.getItem("userEmail").replace(/[.@]/g, "");
       const response = await fetch(
-        `https://crudcrud.com/api/a8fe2055922d40b2bf1a384e7b83be95/cart${emailId}`,
+        `https://crudcrud.com/api/4f116e22f46c4e32b84ec1cc61be6702/cart${emailId}`,
         {
-          method: "get",
+          method: "GET",
         }
       );
       if (response.ok) {
